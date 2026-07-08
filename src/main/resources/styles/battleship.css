@@ -1,0 +1,132 @@
+.app-shell {
+    -fx-background-color: linear-gradient(to bottom right, #07111f, #0a2a43 55%, #06111c);
+    -fx-font-family: "Segoe UI", "Inter", "Arial";
+}
+
+.header {
+    -fx-background-color: linear-gradient(to right, rgba(12, 31, 52, .95), rgba(0, 126, 167, .45));
+    -fx-border-color: rgba(126, 230, 255, .35);
+    -fx-border-width: 0 0 1 0;
+}
+
+.title {
+    -fx-text-fill: #e6fbff;
+    -fx-font-size: 32px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 2px;
+}
+
+.subtitle {
+    -fx-text-fill: #9bd8ec;
+    -fx-font-size: 15px;
+}
+
+.glass-panel {
+    -fx-background-color: rgba(10, 24, 38, .78);
+    -fx-background-radius: 22;
+    -fx-border-color: rgba(126, 230, 255, .20);
+    -fx-border-radius: 22;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.45), 22, .25, 0, 10);
+}
+
+.section-title {
+    -fx-text-fill: #f1fdff;
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+}
+
+.ocean-grid {
+    -fx-padding: 14;
+    -fx-background-color: rgba(0, 44, 72, .40);
+    -fx-background-radius: 18;
+}
+
+.axis-label {
+    -fx-text-fill: #7ee6ff;
+    -fx-font-weight: 700;
+    -fx-font-size: 15px;
+    -fx-min-width: 30px;
+    -fx-alignment: center;
+}
+
+.water-cell {
+    -fx-arc-width: 14;
+    -fx-arc-height: 14;
+    -fx-fill: linear-gradient(to bottom right, #0d6b91, #07334e);
+    -fx-stroke: rgba(126, 230, 255, .38);
+    -fx-stroke-width: 1.2;
+}
+
+.cell:hover .water-cell {
+    -fx-fill: linear-gradient(to bottom right, #16a7d4, #0c4c70);
+    -fx-stroke: #e1fbff;
+}
+
+.cell-coordinate {
+    -fx-text-fill: rgba(230, 251, 255, .72);
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+}
+
+.missed .water-cell {
+    -fx-fill: linear-gradient(to bottom right, #2e465a, #132635);
+}
+
+.hit .water-cell {
+    -fx-fill: linear-gradient(to bottom right, #68203a, #240916);
+}
+
+.sunk .water-cell {
+    -fx-fill: linear-gradient(to bottom right, #6f4b08, #241606);
+}
+
+.revealed .water-cell {
+    -fx-stroke: #ffd166;
+    -fx-stroke-width: 2.2;
+}
+
+.hit-marker, .sunk-marker, .miss-marker {
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,.45), 12, .40, 0, 0);
+}
+
+.primary-button, .secondary-button {
+    -fx-background-radius: 14;
+    -fx-padding: 12 14 12 14;
+    -fx-font-weight: 800;
+    -fx-cursor: hand;
+}
+
+.primary-button {
+    -fx-background-color: linear-gradient(to right, #00c2ff, #2ce6a7);
+    -fx-text-fill: #03131c;
+}
+
+.secondary-button {
+    -fx-background-color: rgba(126, 230, 255, .14);
+    -fx-border-color: rgba(126, 230, 255, .36);
+    -fx-border-radius: 14;
+    -fx-text-fill: #dffaff;
+}
+
+.stats-card, .legend {
+    -fx-background-color: rgba(255,255,255,.08);
+    -fx-background-radius: 16;
+    -fx-padding: 14;
+    -fx-text-fill: #e8fbff;
+    -fx-font-size: 14px;
+}
+
+.legend .label {
+    -fx-text-fill: #d5f7ff;
+}
+
+.battle-log {
+    -fx-control-inner-background: #07131f;
+    -fx-text-fill: #d8faff;
+    -fx-background-color: #07131f;
+    -fx-background-radius: 14;
+    -fx-border-color: rgba(126, 230, 255, .22);
+    -fx-border-radius: 14;
+    -fx-font-family: "Cascadia Mono", "Consolas", monospace;
+    -fx-font-size: 12px;
+}
