@@ -42,6 +42,7 @@ public class warsimulation {
 		
 		private void radarCheck(String torpedoGuess){
 			numOfGuess++;// increment number of torpedoes launched after each volley.
+			SoundEffects.playLaunch();
 			String result = "miss";
 			
 			for(battleship target: fleet){// for each of the element references in the arraylist check if hit registered or not.
@@ -55,9 +56,21 @@ public class warsimulation {
 				}
 			}// close for
 			System.out.println(result);
+			playResultSound(result);
+		}// close method
+
+		private void playResultSound(String result){
+			if(result.equals("hit!")){
+				SoundEffects.playHit();
+			}else if(result.equals("kill confirmed")){
+				SoundEffects.playSunk();
+			}else{
+				SoundEffects.playMiss();
+			}
 		}// close method
 		
 		private void finishGame(){
+			SoundEffects.playVictory();
 			System.out.println("The enemy fleet is destroyed!");
 			if(numOfGuess <= 30){
 				System.out.println("Well done! you only used" +numOfGuess+ "torpedos.");

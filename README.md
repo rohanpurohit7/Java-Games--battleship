@@ -1,66 +1,61 @@
-# Battleship Command Center — JavaFX Edition
+# Battleship Command
 
-A modernized JavaFX version of the original console Battleship exercise. The original Java classes remain preserved, while the new application adds a polished GUI, animated tactical board, mission log, hit/miss feedback, and IntelliJ/Cursor-friendly Gradle configuration.
+Battleship Command is a JavaFX naval strategy game built from a simple console Battleship exercise and expanded into an interactive GUI mission.
 
-## Highlights
+The game uses a 7x7 battlefield, hidden submarine fleets, animated torpedo strikes, generated sound effects, spoken admiral taunts, and a mission difficulty selector that limits available torpedoes.
 
-- JavaFX tactical ocean grid
-- Animated hit, miss, and sunk markers
-- Hidden fleet placement with training reveal mode
-- Mission statistics and battle log
-- Preserved original console implementation
-- Gradle project that opens cleanly in IntelliJ IDEA or Cursor
+## Documentation
 
-## Navigation
+- [Documentation Index](docs/index.md)
+- [Demo Guide](docs/demo.md)
+- [Game Narrative](docs/narrative.md)
+- [Architecture Notes](docs/architecture.md)
+
+## Features
+
+- JavaFX graphical battlefield with clickable grid cells
+- Hidden Japanese, English, and German submarine fleets
+- Hit cells reveal colored submarine silhouettes
+- Fleet kill board with per-fleet hit counts and kill counts
+- Easy, Medium, and High mission levels
+- Torpedo limits by level:
+  - Easy: 15 torpedoes
+  - Medium: 13 torpedoes
+  - High: 10 torpedoes
+- Torpedo flight and explosion visual effects
+- Generated launch, miss, hit, sunk, and victory sound effects
+- Windows text-to-speech admiral comments for hits, sinks, victory, and failure
+
+## Run
+
+This project is configured as a Gradle JavaFX application.
+
+On this machine, use:
+
+```powershell
+.\run-gui.bat
+```
+
+Or run Gradle directly after setting `JAVA_HOME` to a JDK 24 installation:
+
+```powershell
+$env:JAVA_HOME='C:\Users\rpuro\.jdks\temurin-24.0.2'
+$env:Path="$env:JAVA_HOME\bin;$env:Path"
+.\gradlew.bat run
+```
+
+The active GUI entry point is:
 
 ```text
-README.md
-├── build.gradle                         JavaFX Gradle build
-├── settings.gradle                      Gradle project settings
-├── docs/
-│   └── gui-concept.svg                  Visual concept mockup
-├── src/main/java/io/github/rohanpurohit7/battleship/
-│   ├── BattleshipFxApp.java             JavaFX GUI application entry point
-│   └── FleetShip.java                   GUI game model
-├── src/main/resources/styles/
-│   └── battleship.css                   Rich tactical UI styling
-└── legacy source files                  Original console game classes
+navalbattle.BattleshipFxApp
 ```
 
-## Run in IntelliJ IDEA or Cursor
-
-1. Open the repository folder as a Gradle project.
-2. Let the IDE import Gradle dependencies.
-3. Use JDK 21 or newer.
-4. Run the Gradle task:
-
-```bash
-gradle run
-```
-
-You can also run the main class directly after Gradle import:
+## Source Layout
 
 ```text
-io.github.rohanpurohit7.battleship.BattleshipFxApp
+src/main/java/navalbattle/
+  BattleshipFxApp.java   JavaFX game UI, state, grid, kill board, and animations
+  GameSounds.java        Generated tone effects and Windows speech synthesis
 ```
 
-Optional: if you want a checked-in Gradle wrapper later, run `gradle wrapper` locally and commit the generated wrapper files.
-
-## UX Concept
-
-Open `docs/gui-concept.svg` to preview the intended interface: a sonar-style board, mission console, action buttons, and battle log.
-
-## Design Narrative
-
-The original project demonstrated object-oriented game logic through a text console. The JavaFX version turns that logic into an interactive desktop game. The board is represented as an 8x8 tactical ocean grid. Each click launches a torpedo. The UI then records a hit, miss, or kill-confirmed event and updates mission statistics.
-
-## Portfolio Value
-
-This project now demonstrates:
-
-- Java object modeling
-- event-driven GUI programming
-- JavaFX layout and styling
-- user interaction design
-- game-state management
-- Gradle-based Java application packaging
+Older console exercise files remain in the repository root for reference, but the supported application is the JavaFX GUI.

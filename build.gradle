@@ -6,9 +6,11 @@ plugins {
 group = 'io.github.rohanpurohit7.games'
 version = '2.0.0'
 
+layout.buildDirectory = file('build-naval')
+
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(24)
     }
 }
 
@@ -17,8 +19,16 @@ javafx {
     modules = ['javafx.controls', 'javafx.graphics']
 }
 
+sourceSets {
+    main {
+        java {
+            include 'navalbattle/**'
+        }
+    }
+}
+
 application {
-    mainClass = 'io.github.rohanpurohit7.battleship.BattleshipFxApp'
+    mainClass = 'navalbattle.BattleshipFxApp'
 }
 
 tasks.withType(JavaCompile).configureEach {
