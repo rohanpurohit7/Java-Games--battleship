@@ -1,3 +1,6 @@
+// Legacy reference only. This class is not referenced by the active JavaFX runtime.
+// The supported entry point is navalbattle.BattleshipFxApp under src/main/java/navalbattle.
+
 import java.io.*;
 import java.util.*;
 public class commandlaunch {

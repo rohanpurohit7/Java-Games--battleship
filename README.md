@@ -10,6 +10,7 @@ The game uses a 7x7 battlefield, hidden submarine fleets, animated torpedo strik
 - [Demo Guide](docs/demo.md)
 - [Game Narrative](docs/narrative.md)
 - [Architecture Notes](docs/architecture.md)
+- [Enterprise Guide](docs/enterprise-guide.md)
 
 ## Features
 
@@ -95,4 +96,4 @@ src/main/java/navalbattle/
   GameSounds.java        Generated tone effects and Windows speech synthesis
 ```
 
-Older console exercise files remain in the repository root for reference, but the supported application is the JavaFX GUI.
+Older console exercise files and inactive JavaFX package variants are retained under `legacy/` for reference only. They are not included in the active runtime build.

@@ -11,6 +11,7 @@ The current game is intentionally compact: all gameplay takes place on one scree
 - [Demo Guide](demo.md): how to run and present the game.
 - [Game Narrative](narrative.md): the mission premise, admiral identities, and voice line behavior.
 - [Architecture Notes](architecture.md): project structure, JavaFX components, audio strategy, and build notes.
+- [Enterprise Guide](enterprise-guide.md): repository map, debugging runbooks, artifact checks, and cloud deployment notes.
 
 ## Main User Flow
 

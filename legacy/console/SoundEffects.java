@@ -1,3 +1,6 @@
+// Legacy reference only. This class is not referenced by the active JavaFX runtime.
+// The active sound implementation is navalbattle.GameSounds.
+
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.LineUnavailableException;
