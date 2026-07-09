@@ -1,0 +1,10 @@
+.gradle/
+.idea/
+build/
+build-generated/
+build-naval/
+build-app/
+out/
+dist/
+*.class
+*.iml
